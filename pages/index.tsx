@@ -1,9 +1,29 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
+import type { NextPage, InferGetStaticPropsType, GetStaticProps } from 'next';
+import type { Post } from '../lib/types';
+import { getAllPosts } from '../lib/api';
 
-const Home: NextPage = () => {
-  return <div>zsgomoridev</div>;
+type Props = {
+  posts: Post[];
 };
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const posts = getAllPosts();
+
+  return {
+    props: {
+      posts,
+    },
+  };
+};
+
+const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ posts }) => (
+  <ul>
+    {posts.map((post) => (
+      <li key={post.title}>
+        {post.title} {post.slug} {post.date}
+      </li>
+    ))}
+  </ul>
+);
 
 export default Home;
