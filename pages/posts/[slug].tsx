@@ -1,8 +1,8 @@
 import type { NextPage, InferGetStaticPropsType, GetStaticProps, GetStaticPaths } from 'next';
 import type { ParsedUrlQuery } from 'querystring';
-import type { Post } from '../../lib/types';
-import { getAllPosts, getPostBySlug } from '../../lib/api';
-import assertIsNonNullish from '../../lib/assertIsNonNullish';
+import type { Post } from 'lib/types';
+import { getAllPosts, getPostBySlug } from 'lib/blog';
+import assertIsNonNullish from 'lib/assertIsNonNullish';
 
 export const getStaticPaths: GetStaticPaths = () => {
   const posts = getAllPosts();

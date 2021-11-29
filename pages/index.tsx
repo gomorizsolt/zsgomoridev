@@ -1,6 +1,7 @@
 import type { NextPage, InferGetStaticPropsType, GetStaticProps } from 'next';
-import type { Post } from '../lib/types';
-import { getAllPosts } from '../lib/api';
+import type { Post } from 'lib/types';
+import { getAllPosts } from 'lib/blog';
+import BlogCard from 'components/BlogCard';
 
 type Props = {
   posts: Post[];
@@ -17,13 +18,11 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 };
 
 const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ posts }) => (
-  <ul>
+  <div>
     {posts.map((post) => (
-      <li key={post.title}>
-        {post.title} {post.slug} {post.date}
-      </li>
+      <BlogCard key={post.title} post={post} />
     ))}
-  </ul>
+  </div>
 );
 
 export default Home;
