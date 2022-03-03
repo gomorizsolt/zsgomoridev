@@ -1,3 +1,4 @@
-import useViews from './useViews';
+import useViews from "./useViews";
+import useNavigationItems from "./useNavigationItems";
 
-export { useViews };
+export { useViews, useNavigationItems };

@@ -1,33 +1,40 @@
-import fs from 'fs';
-import { join } from 'path';
-import matter from 'gray-matter';
-import { remark } from 'remark';
-import html from 'remark-html';
-import prism from 'remark-prism';
-import { Post, Fields } from './types';
+import fs from "fs";
+import { join } from "path";
+import matter from "gray-matter";
+import { remark } from "remark";
+import html from "remark-html";
+import prism from "remark-prism";
+import { format } from "date-fns";
+import readingTime from "reading-time";
+import type { Post, Fields } from "./types";
 
-const postsDirectory = join(process.cwd(), 'posts');
+const postsDirectory = join(process.cwd(), "posts");
 
 const getPostSlugs = () => {
   return fs.readdirSync(postsDirectory);
 };
 
 export const getPostBySlug = (slug: string, fields: Fields[] = []): Post => {
-  const realSlug = slug.replace(/\.md$/, '');
+  const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(postsDirectory, `${realSlug}.md`);
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
+  const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
-  const { title, date } = data;
+  const { title, date, description, coverImage, tags = [] } = data;
 
   // https://stackoverflow.com/a/69104602/9599137
   const items = {
     title,
     date,
+    formattedDate: format(new Date(date), "MMMM dd, yyyy"),
+    description,
+    coverImage,
+    readingTime: readingTime(content).text,
     slug: realSlug,
-  } as Record<keyof Post, string>;
+    tags,
+  } as Post;
 
   fields.forEach((field) => {
-    if (field === 'content') {
+    if (field === "content") {
       items.content = content;
     }
   });
@@ -43,7 +50,11 @@ export const getAllPosts = (fields: Fields[] = []) => {
 };
 
 export const markdownToHtml = async (markdown: string) => {
-  const result = await remark().use(html, { sanitize: false }).use(prism).process(markdown);
+  const result = await remark()
+    .use(html, { sanitize: false })
+    // @ts-ignore
+    .use(prism)
+    .process(markdown);
 
   return result.toString();
 };
