@@ -1,4 +1,4 @@
-import redis from './redis';
+import redis from "./redis";
 
 export const getViews = async (slug: string): Promise<number> => {
   const { data, error } = await redis.get(slug);

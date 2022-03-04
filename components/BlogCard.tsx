@@ -1,6 +1,6 @@
-import React from 'react';
-import type { Post } from 'lib/types';
-import { useViews } from 'hooks';
+import React from "react";
+import type { Post } from "lib/types";
+import { useViews } from "hooks";
 
 interface BlogCardProps {
   post: Post;

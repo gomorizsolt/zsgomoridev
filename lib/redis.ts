@@ -1,4 +1,4 @@
-import upstash from '@upstash/redis';
+import upstash from "@upstash/redis";
 
 const redis = upstash({
   url: process.env.UPSTASH_REDIS_REST_URL,

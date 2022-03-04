@@ -1,7 +1,7 @@
-import { SWRConfig } from 'swr';
-import type { AppProps } from 'next/app';
-import 'styles/globals.css';
-import 'styles/prism.css';
+import { SWRConfig } from "swr";
+import type { AppProps } from "next/app";
+import "styles/globals.css";
+import "styles/prism.css";
 
 const fetcher = (url: string) =>
   fetch(url).then((res) => {
