@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "components/Layout";
 
 const About: React.FC = () => (
-  <Layout>
+  <Layout title="About - Zsolt Gomori">
     <section className="prose max-w-none text-justify">
       <h1>about me</h1>
       <p>
