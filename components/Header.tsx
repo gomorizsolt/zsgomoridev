@@ -29,7 +29,7 @@ const MobileNavigation: React.FC = ({ children }) => {
       <button
         aria-label="Menu"
         onClick={toggleMenu}
-        className={clsx("tham tham-w-6 tham-e-squeeze z-20", {
+        className={clsx("tham tham-e-squeeze tham-w-6 z-20", {
           "tham-active": isOpen,
         })}
       >
