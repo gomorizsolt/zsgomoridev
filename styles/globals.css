@@ -43,10 +43,14 @@
   }
 
   p {
-    @apply text-slate-300;
+    @apply text-sm text-slate-300;
   }
 
-  @media screen(md) {
+  @media screen(sm) {
+    p {
+      @apply text-base;
+    }
+
     h1 {
       @apply text-5xl;
     }
