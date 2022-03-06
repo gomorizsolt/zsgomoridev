@@ -1,36 +1,45 @@
-import type { NextPage } from "next";
-import Link from "next/link";
-import Image from "next/image";
+import type { NextPage, GetStaticProps, InferGetStaticPropsType } from "next";
+import type { Post } from "lib/types";
+import { getAllPosts } from "lib/blog";
 import Layout from "components/Layout";
-import Button from "components/Button";
-import Avatar from "public/images/avatar.png";
+import PostCard from "components/PostCard";
 
-const Home: NextPage = () => (
+type Props = {
+  posts: Post[];
+};
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const posts = getAllPosts().slice(0, 3);
+
+  return {
+    props: {
+      posts,
+    },
+  };
+};
+
+const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
+  posts,
+}) => (
   <Layout>
-    <section className="flex items-center justify-between">
-      <div className="pr-4">
-        <h1>ZSOLT GOMORI</h1>
+    <section className="border-b-2 border-b-slate-700 py-12 text-center">
+      <h1 className="text-6xl sm:text-7xl">Hey, I'm Zsolt</h1>
 
-        <p className="mt-2">
-          Frontend Developer at <strong>Reppublika</strong>. A down-to-earth guy
-          with eagerness to grow and enthusiasm for health. Fan of playing &
-          watching basketball.
-        </p>
-
-        <Link href="/about" passHref>
-          <a>
-            <Button className="mt-4">about me</Button>
-          </a>
-        </Link>
-      </div>
-
-      <div className="border-grey-100 relative h-36 w-36 flex-shrink-0 rounded-full border-2 border-solid">
-        <Image src={Avatar} layout="fill" alt="Picture of Zsolt Gomori" />
-      </div>
+      <p className="mx-auto mt-4 max-w-2xl">
+        Frontend Developer currently at <strong>Reppublika</strong>. A
+        down-to-earth guy with eagerness to learn and passion towards physical &
+        mental health. Big fan of basketball.
+      </p>
     </section>
 
-    <section className="mt-12">
+    <section className="py-12">
       <h1>Blog</h1>
+
+      <div className="mt-6">
+        {posts.map((post) => (
+          <PostCard key={post.title} post={post} />
+        ))}
+      </div>
     </section>
   </Layout>
 );
