@@ -19,7 +19,7 @@ export const getPostBySlug = (slug: string, fields: Fields[] = []): Post => {
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
-  const { title, date, description, coverImage, tags = [] } = data;
+  const { title, date, description, tag } = data;
 
   // https://stackoverflow.com/a/69104602/9599137
   const items = {
@@ -27,10 +27,9 @@ export const getPostBySlug = (slug: string, fields: Fields[] = []): Post => {
     date,
     formattedDate: format(new Date(date), "MMMM dd, yyyy"),
     description,
-    coverImage,
     readingTime: readingTime(content).text,
     slug: realSlug,
-    tags,
+    tag,
   } as Post;
 
   fields.forEach((field) => {

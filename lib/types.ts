@@ -6,8 +6,7 @@ export interface Post {
   content: string;
   description: string;
   readingTime: string;
-  coverImage: string;
-  tags: string[];
+  tag: string;
 }
 
 export type Fields = "content";
