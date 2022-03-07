@@ -26,7 +26,7 @@ const Blog: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   posts,
 }) => (
   <Layout
-    title="Blog - Zsolt Gomori"
+    title="Blog | ZSOLT GOMORI"
     description="Thoughts on frontend development."
   >
     <h1 className="mb-8">blog</h1>
