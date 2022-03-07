@@ -10,8 +10,9 @@ interface LayoutProps {
 }
 
 const defaultMeta = {
-  title: "Zsolt Gomori - developer, health enthusiast, fan of basketball.",
-  description: "Frontend developer and JavaScript enthusiast.",
+  title: "Zsolt Gomori",
+  description:
+    "Frontend developer, JavaScript & health  enthusiast, fan of basketball.",
 };
 
 const Layout: React.FC<LayoutProps> = ({
