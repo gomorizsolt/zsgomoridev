@@ -22,13 +22,12 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   posts,
 }) => (
   <Layout>
-    <section className="border-b-2 border-b-slate-700 py-12 text-center">
-      <h1 className="text-6xl sm:text-7xl">Hey, I'm Zsolt</h1>
+    <section className="border-b-grey-500 border-b-2 py-12 text-center">
+      <h1 className="gradient-text text-6xl sm:text-7xl">ZSOLT GOMORI</h1>
 
-      <p className="mx-auto mt-4 max-w-2xl">
-        Frontend Developer currently at <strong>Reppublika</strong>. A
-        down-to-earth guy with eagerness to learn and passion towards physical &
-        mental health. Big fan of basketball.
+      <p className="mx-auto mt-4 max-w-xl">
+        Frontend Developer. A down-to-earth guy with eagerness to learn and
+        passion towards physical & mental health. Big fan of basketball.
       </p>
     </section>
 

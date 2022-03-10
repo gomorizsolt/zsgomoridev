@@ -4,7 +4,7 @@ import Layout from "components/Layout";
 const About: React.FC = () => (
   <Layout title="About | ZSOLT GOMORI">
     <section className="prose max-w-none text-justify">
-      <h1>about me</h1>
+      <h1>About Me</h1>
       <p>
         Hey there, it's Zsolt! I'm a frontend developer from Debrecen/Hungary.
         My life revolves around programming and solving problems. Over the
@@ -55,7 +55,7 @@ const About: React.FC = () => (
         articles about web development and my learnings in general.
       </p>
 
-      <h2>passions beyond web development</h2>
+      <h2>Passions beyond web development</h2>
 
       <p>
         Even though my passion for programming is endless, it's cruical not to

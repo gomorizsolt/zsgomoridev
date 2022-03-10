@@ -8,7 +8,7 @@ import ClientOnly from "components/ClientOnly";
 import Avatar from "public/images/avatar.png";
 import { useNavigationItems } from "hooks";
 
-const MobileNavigation: React.FC = ({ children }) => {
+const MobileNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { navigationItems } = useNavigationItems();
 
@@ -29,19 +29,19 @@ const MobileNavigation: React.FC = ({ children }) => {
       <button
         aria-label="Menu"
         onClick={toggleMenu}
-        className={clsx("tham tham-e-squeeze tham-w-6 z-20", {
+        className={clsx("tham tham-e-squeeze tham-w-6 z-20 ", {
           "tham-active": isOpen,
         })}
       >
         <div className="tham-box">
-          <div className="tham-inner bg-slate-300" />
+          <div className="tham-inner bg-grey-300" />
         </div>
       </button>
 
       {isOpen && (
         <div
           className={clsx(
-            "absolute top-0 left-0 z-10 h-full w-full bg-slate-900"
+            "bg-grey-900 absolute top-0 left-0 z-10 h-full w-full"
           )}
         />
       )}
@@ -54,8 +54,8 @@ const MobileNavigation: React.FC = ({ children }) => {
                 <li
                   key={name}
                   className={clsx(
-                    "text-2xl font-medium hover:text-slate-300",
-                    isActive ? "text-slate-200" : "text-slate-400"
+                    "hover:text-grey-100 text-2xl font-medium transition-colors duration-150 ease-in",
+                    isActive ? "text-grey-100" : "text-grey-300"
                   )}
                 >
                   <Link href={path}>{name}</Link>
@@ -80,8 +80,8 @@ const DesktopNavigation: React.FC = () => {
             key={name}
             className={clsx(
               "rounded-lg py-2 px-3 font-medium",
-              "transition-colors duration-100 ease-in hover:bg-slate-800 hover:text-slate-200",
-              isActive ? "bg-slate-800 text-slate-200" : "text-slate-300"
+              "hover:bg-grey-800 hover:text-grey-100 transition-colors duration-100 ease-in",
+              isActive ? "bg-grey-800 text-grey-100" : "text-grey-300"
             )}
           >
             <Link href={path}>{name}</Link>
@@ -100,7 +100,7 @@ const Header: React.FC = () => {
       <ClientOnly>
         <div
           className={clsx(
-            "relative h-10 w-10 rounded-full border-2 border-solid border-slate-100",
+            "border-grey-100 relative h-10 w-10 rounded-full border-2 border-solid",
             {
               hidden: isMobile,
             }
@@ -120,13 +120,13 @@ const Header: React.FC = () => {
         aria-label="Command"
         className={clsx(
           "z-10 rounded-lg p-1.5",
-          "group transition-colors duration-100 ease-in hover:bg-slate-800"
+          "group hover:bg-grey-800 transition-colors duration-100 ease-in"
         )}
       >
         <RiCommandLine
           className={clsx(
-            "h-6 w-6 text-slate-400",
-            "transition-colors duration-100 ease-in  group-hover:text-slate-200"
+            "text-grey-300 h-6 w-6",
+            "group-hover:text-grey-200 transition-colors duration-100  ease-in"
           )}
         />
       </button>

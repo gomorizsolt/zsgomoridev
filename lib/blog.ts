@@ -10,9 +10,7 @@ import type { Post, Fields } from "./types";
 
 const postsDirectory = join(process.cwd(), "posts");
 
-const getPostSlugs = () => {
-  return fs.readdirSync(postsDirectory);
-};
+const getPostSlugs = () => fs.readdirSync(postsDirectory);
 
 export const getPostBySlug = (slug: string, fields: Fields[] = []): Post => {
   const realSlug = slug.replace(/\.md$/, "");
