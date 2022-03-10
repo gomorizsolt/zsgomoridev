@@ -62,7 +62,7 @@ const Layout: React.FC<LayoutProps> = ({
         >
           <FaCode
             aria-label="Source"
-            className="text-grey-300 hover:text-grey-100 h-5 w-5 transition-colors duration-150"
+            className="h-5 w-5 text-grey-300 transition-colors duration-150 hover:text-grey-100"
           />
         </a>
 
@@ -73,7 +73,7 @@ const Layout: React.FC<LayoutProps> = ({
         >
           <FaGithub
             aria-label="GitHub"
-            className="text-grey-300 hover:text-grey-100 h-5 w-5 transition-colors duration-150"
+            className="h-5 w-5 text-grey-300 transition-colors duration-150 hover:text-grey-100"
           />
         </a>
 
@@ -84,7 +84,7 @@ const Layout: React.FC<LayoutProps> = ({
         >
           <FaTwitter
             aria-label="Twitter"
-            className="text-grey-300 hover:text-grey-100 h-5 w-5 transition-colors duration-150"
+            className="h-5 w-5 text-grey-300 transition-colors duration-150 hover:text-grey-100"
           />
         </a>
 
@@ -95,7 +95,7 @@ const Layout: React.FC<LayoutProps> = ({
         >
           <FaLinkedin
             aria-label="LinkedIn"
-            className="text-grey-300 hover:text-grey-100 h-5 w-5 transition-colors duration-150"
+            className="h-5 w-5 text-grey-300 transition-colors duration-150 hover:text-grey-100"
           />
         </a>
       </footer>

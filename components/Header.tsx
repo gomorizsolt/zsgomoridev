@@ -29,7 +29,7 @@ const MobileNavigation: React.FC = () => {
       <button
         aria-label="Menu"
         onClick={toggleMenu}
-        className={clsx("tham tham-e-squeeze tham-w-6 z-20 ", {
+        className={clsx("tham-e-squeeze tham tham-w-6 z-20 ", {
           "tham-active": isOpen,
         })}
       >
@@ -41,7 +41,7 @@ const MobileNavigation: React.FC = () => {
       {isOpen && (
         <div
           className={clsx(
-            "bg-grey-900 absolute top-0 left-0 z-10 h-full w-full"
+            "absolute top-0 left-0 z-10 h-full w-full bg-grey-900"
           )}
         />
       )}
@@ -54,7 +54,7 @@ const MobileNavigation: React.FC = () => {
                 <li
                   key={name}
                   className={clsx(
-                    "hover:text-grey-100 text-2xl font-medium transition-colors duration-150 ease-in",
+                    "text-2xl font-medium transition-colors duration-150 ease-in hover:text-grey-100",
                     isActive ? "text-grey-100" : "text-grey-300"
                   )}
                 >
@@ -80,7 +80,7 @@ const DesktopNavigation: React.FC = () => {
             key={name}
             className={clsx(
               "rounded-lg py-2 px-3 font-medium",
-              "hover:bg-grey-800 hover:text-grey-100 transition-colors duration-100 ease-in",
+              "transition-colors duration-100 ease-in hover:bg-grey-800 hover:text-grey-100",
               isActive ? "bg-grey-800 text-grey-100" : "text-grey-300"
             )}
           >
@@ -100,7 +100,7 @@ const Header: React.FC = () => {
       <ClientOnly>
         <div
           className={clsx(
-            "border-grey-100 relative h-10 w-10 rounded-full border-2 border-solid",
+            "relative h-10 w-10 rounded-full border-2 border-solid border-grey-100",
             {
               hidden: isMobile,
             }
@@ -120,13 +120,13 @@ const Header: React.FC = () => {
         aria-label="Command"
         className={clsx(
           "z-10 rounded-lg p-1.5",
-          "group hover:bg-grey-800 transition-colors duration-100 ease-in"
+          "group transition-colors duration-100 ease-in hover:bg-grey-800"
         )}
       >
         <RiCommandLine
           className={clsx(
-            "text-grey-300 h-6 w-6",
-            "group-hover:text-grey-200 transition-colors duration-100  ease-in"
+            "h-6 w-6 text-grey-300",
+            "transition-colors duration-100 ease-in  group-hover:text-grey-200"
           )}
         />
       </button>
