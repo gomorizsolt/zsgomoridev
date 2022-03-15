@@ -10,7 +10,7 @@ const NAVIGATION_ITEMS = [
   { name: "uses", path: "/uses" },
 ];
 
-const useNavigationItems = () => {
+export const useNavigationItems = () => {
   const router = useRouter();
 
   const navigationItems = useMemo(
@@ -25,5 +25,3 @@ const useNavigationItems = () => {
 
   return { navigationItems };
 };
-
-export default useNavigationItems;

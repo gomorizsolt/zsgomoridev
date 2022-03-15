@@ -1,6 +1,6 @@
+import type { Post } from "lib/types";
 import React from "react";
 import Link from "next/link";
-import type { Post } from "lib/types";
 import { useViewsCounter } from "hooks";
 import { formatViews } from "lib/formatViews";
 import Spinner from "components/Spinner";
@@ -33,4 +33,16 @@ const PostCard: React.FC<PostCardProps> = ({ post }) => {
   );
 };
 
-export default PostCard;
+interface PostCardsProps {
+  posts: Post[];
+}
+
+const PostCards: React.FC<PostCardsProps> = ({ posts }) => (
+  <div className="space-y-6">
+    {posts.map((post) => (
+      <PostCard key={post.title} post={post} />
+    ))}
+  </div>
+);
+
+export default PostCards;

@@ -2,7 +2,7 @@ import type { NextPage, GetStaticProps, InferGetStaticPropsType } from "next";
 import type { Post } from "lib/types";
 import { getAllPosts } from "lib/blog";
 import Layout from "components/Layout";
-import PostCard from "components/PostCard";
+import PostCards from "components/PostCards";
 
 type Props = {
   posts: Post[];
@@ -32,13 +32,9 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
     </section>
 
     <section className="py-12">
-      <h1>Blog</h1>
+      <h1 className="mb-6">Blog</h1>
 
-      <div className="mt-6">
-        {posts.map((post) => (
-          <PostCard key={post.title} post={post} />
-        ))}
-      </div>
+      <PostCards posts={posts} />
     </section>
   </Layout>
 );

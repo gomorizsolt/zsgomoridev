@@ -2,6 +2,7 @@ import type { NextPage, InferGetStaticPropsType, GetStaticProps } from "next";
 import type { Post } from "lib/types";
 import React from "react";
 import Layout from "components/Layout";
+import PostCards from "components/PostCards";
 import { getAllPosts } from "lib/blog";
 
 type Props = {
@@ -18,10 +19,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   };
 };
 
-interface PostsGridCardProps {
-  post: Post;
-}
-
 const Blog: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   posts,
 }) => (
@@ -30,6 +27,8 @@ const Blog: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
     description="Thoughts on frontend development."
   >
     <h1 className="mb-8">blog</h1>
+
+    <PostCards posts={posts} />
   </Layout>
 );
 
