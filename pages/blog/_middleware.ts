@@ -5,6 +5,8 @@ import { setViews } from "lib/views";
 export default function middleware(req: NextRequest, event: NextFetchEvent) {
   const [, slug] = req.nextUrl.pathname.split("/blog/");
 
+  console.log("slug", slug);
+
   if (!slug || process.env.NODE_ENV === "development") {
     return NextResponse.next();
   }
