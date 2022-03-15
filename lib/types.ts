@@ -5,7 +5,7 @@ export interface Post {
   slug: string;
   content: string;
   description: string;
-  readingTime: string;
+  formattedReadingTime: string;
   tag: string;
 }
 

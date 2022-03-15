@@ -6,6 +6,7 @@ import html from "remark-html";
 import prism from "remark-prism";
 import { format } from "date-fns";
 import readingTime from "reading-time";
+import { formatReadingTime } from "lib/formatReadingTime";
 import type { Post, Fields } from "./types";
 
 const postsDirectory = join(process.cwd(), "posts");
@@ -23,11 +24,11 @@ export const getPostBySlug = (slug: string, fields: Fields[] = []): Post => {
   const items = {
     title,
     date,
-    formattedDate: format(new Date(date), "MMMM dd, yyyy"),
     description,
-    readingTime: readingTime(content).text,
-    slug: realSlug,
     tag,
+    slug: realSlug,
+    formattedDate: format(new Date(date), "MMMM dd, yyyy"),
+    formattedReadingTime: formatReadingTime(readingTime(content).time),
   } as Post;
 
   fields.forEach((field) => {

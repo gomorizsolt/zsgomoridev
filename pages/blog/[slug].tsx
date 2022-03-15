@@ -5,12 +5,13 @@ import type {
   GetStaticPaths,
 } from "next";
 import type { ParsedUrlQuery } from "querystring";
-import { format } from "date-fns";
 import type { Post } from "lib/types";
 import { getAllPosts, getPostBySlug, markdownToHtml } from "lib/blog";
 import Layout from "components/Layout";
 import assertIsNonNullish from "lib/assertIsNonNullish";
 import { useViewsCounter } from "hooks";
+import { formatViews } from "lib/formatViews";
+import Spinner from "components/Spinner";
 
 type Props = {
   post: Post;
@@ -66,13 +67,15 @@ const BlogPost: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
     <Layout>
       <h1 className="mb-3">{post.title}</h1>
 
-      <p className="mb-8 text-sm font-bold">
-        {post.formattedDate}
-        <span className="mx-2">•</span>
-        {post.readingTime}
-        <span className="mx-2">•</span>
-        {`${views} views`}
-      </p>
+      <div className="mb-8 flex items-center justify-between">
+        <p>
+          {post.formattedDate}
+          <span className="mx-2">•</span>
+          {post.formattedReadingTime}
+        </p>
+
+        {isLoading ? <Spinner /> : <p>{formatViews(views)}</p>}
+      </div>
 
       <article
         className="prose max-w-none"
