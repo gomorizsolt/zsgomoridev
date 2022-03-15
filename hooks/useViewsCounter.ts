@@ -4,7 +4,7 @@ interface Views {
   views: number;
 }
 
-const useViews = (slug: string) => {
+const useViewsCounter = (slug: string) => {
   const { data, error } = useSWR<Views>(`/api/views/${slug}`);
 
   return {
@@ -14,4 +14,4 @@ const useViews = (slug: string) => {
   };
 };
 
-export default useViews;
+export default useViewsCounter;

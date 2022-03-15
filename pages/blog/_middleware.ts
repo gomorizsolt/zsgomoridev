@@ -3,11 +3,11 @@ import type { NextRequest, NextFetchEvent } from "next/server";
 import { setViews } from "lib/views";
 
 export default function middleware(req: NextRequest, event: NextFetchEvent) {
-  if (process.env.NODE_ENV === "development") {
+  const [, slug] = req.nextUrl.pathname.split("/blog/");
+
+  if (!slug || process.env.NODE_ENV === "development") {
     return NextResponse.next();
   }
-
-  const [, slug] = req.nextUrl.pathname.split("/posts/");
 
   // allow us to run asynchronous code after the rest of the function has completed
   event.waitUntil(

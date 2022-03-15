@@ -10,7 +10,7 @@ import type { Post } from "lib/types";
 import { getAllPosts, getPostBySlug, markdownToHtml } from "lib/blog";
 import Layout from "components/Layout";
 import assertIsNonNullish from "lib/assertIsNonNullish";
-import { useViews } from "hooks";
+import { useViewsCounter } from "hooks";
 
 type Props = {
   post: Post;
@@ -58,7 +58,7 @@ export const getStaticPaths: GetStaticPaths = () => {
 const BlogPost: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   post,
 }) => {
-  const { views, isLoading } = useViews(post.slug);
+  const { views, isLoading } = useViewsCounter(post.slug);
 
   if (!post.content) return <div>404 - {post.title} :(</div>;
 

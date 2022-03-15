@@ -1,4 +1,4 @@
-import useViews from "./useViews";
+import useViewsCounter from "./useViewsCounter";
 import useNavigationItems from "./useNavigationItems";
 
-export { useViews, useNavigationItems };
+export { useViewsCounter, useNavigationItems };
