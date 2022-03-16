@@ -44,6 +44,9 @@ module.exports = {
             "p, ul > li, ol > li": {
               color: theme("colors.grey-300"),
             },
+            p: {
+              textAlign: "justify",
+            },
             "ul > li::marker, ol > li::marker": {
               color: theme("colors.grey-100"),
             },

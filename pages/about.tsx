@@ -3,7 +3,7 @@ import Layout from "components/Layout";
 
 const About: React.FC = () => (
   <Layout title="About | ZSOLT GOMORI">
-    <section className="prose max-w-none text-justify">
+    <section className="prose max-w-none">
       <h1>About Me</h1>
       <p>
         Hey there, it's Zsolt! I'm a frontend developer from Debrecen/Hungary.
