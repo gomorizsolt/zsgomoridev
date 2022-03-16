@@ -57,15 +57,20 @@ const About: React.FC = () => (
 
       <h2>Passions beyond web development</h2>
 
+      <h3>Health</h3>
+
       <p>
         Even though my passion for programming is endless, it's cruical not to
         neglect my mind and body. After all, it's a mentally tiring profession
         and can take its toll on our life. When it comes to sports activities,
         I'm unfortunately limited due to having lower-back pain. Therefore, I
         tend to engage in physical activities that do not put much stress on my
-        back, such as callisthenics, swimming and cycling. In addition to being
-        physically active, I also pay close attention to my diet. I cook for
-        myself, count macros and seek recipes to grow my{" "}
+        back, such as callisthenics, swimming and cycling.
+      </p>
+
+      <p>
+        In addition to being physically active, I also pay close attention to my
+        diet. I cook for myself, count macros and seek recipes to grow my{" "}
         <a
           href="https://recipes-warehouse.vercel.app/"
           rel="nofollow noopener noreferrer"
@@ -76,13 +81,15 @@ const About: React.FC = () => (
         .
       </p>
 
+      <h3>Basketball</h3>
+
       <p>
         I'm a huge fan of playing and watching basketball - even though these
         days I'm rather watching it. My passion for it comes from my youth - I'd
         been playing basketball for more than twelve wonderful years in
-        Jaszbereny. Despite the fact I'm no longer an active player, I'm an
-        active follower of the Hungarian Championship and NBA as well as a
-        certified Table Official.
+        Jaszbereny. Despite the fact I'm no longer playing it, I'm an active
+        follower of the Hungarian Championship and NBA as well as a certified
+        Table Official.
       </p>
     </section>
   </Layout>
