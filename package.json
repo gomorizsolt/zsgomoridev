@@ -20,6 +20,7 @@
     "vue-router": "latest"
   },
   "devDependencies": {
+    "@egoist/tailwindcss-icons": "^1.8.1",
     "husky": "^9.1.6",
     "typescript": "^5.6.3"
   }
