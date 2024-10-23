@@ -54,7 +54,7 @@ const toggleMenu = () => {
       />
     </NuxtLink>
 
-    <nav class="max-w-3xl flex-1 hidden md:block">
+    <nav class="hidden md:block">
       <ul class="flex items-center justify-end gap-x-4 lg:gap-x-8">
         <li v-for="{ label, to } in NAV_ITEMS" :key="label">
           <NuxtLink
