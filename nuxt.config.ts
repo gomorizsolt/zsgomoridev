@@ -10,6 +10,12 @@ export default defineNuxtConfig({
     enabled: true,
   },
 
+  app: {
+    head: {
+      titleTemplate: "%s | ZSOLT GOMORI",
+    },
+  },
+
   compatibilityDate: "2024-04-03",
 
   eslint: {
