@@ -17,6 +17,7 @@
     "@nuxt/image": "^1.8.1",
     "@nuxtjs/tailwindcss": "^6.12.2",
     "nuxt": "^3.13.2",
+    "tailwind-hamburgers": "^1.3.5",
     "vue": "latest",
     "vue-router": "latest"
   },
