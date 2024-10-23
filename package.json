@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@egoist/tailwindcss-icons": "^1.8.1",
+    "@iconify-json/fa": "^1.2.0",
     "husky": "^9.1.6",
     "typescript": "^5.6.3"
   }
