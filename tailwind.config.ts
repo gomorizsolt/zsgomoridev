@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
 import { iconsPlugin } from "@egoist/tailwindcss-icons";
 
 // @ts-expect-error module has no ts declaration file
@@ -8,7 +9,11 @@ export default {
   content: [],
 
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
 
   plugins: [iconsPlugin(), tailwindHamburgers],
