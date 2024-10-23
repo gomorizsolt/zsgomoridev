@@ -8,6 +8,10 @@ const NAV_ITEMS = [
 ];
 
 const isOpen = ref(false);
+
+const toggleMenu = () => {
+  isOpen.value = !isOpen.value;
+};
 </script>
 
 <template>
@@ -15,7 +19,7 @@ const isOpen = ref(false);
     <button
       :class="['tham tham-e-spin tham-w-6 z-20 md:hidden', isOpen && 'tham-active']"
       aria-label="Toggle menu"
-      @click="isOpen = !isOpen"
+      @click="toggleMenu"
     >
       <div class="tham-box">
         <div class="tham-inner bg-neutral-300" />
@@ -30,6 +34,7 @@ const isOpen = ref(false);
               class="text-2xl font-medium text-neutral-300 transition-colors duration-150 ease-in hover:text-neutral-100"
               exact-active-class="text-neutral-100"
               :to="to"
+              @click="toggleMenu"
             >
               {{ label }}
             </NuxtLink>
