@@ -26,7 +26,11 @@ const isOpen = ref(false);
       <nav class="grid h-full w-full content-center justify-center">
         <ul class="flex flex-col gap-y-4 transition-opacity duration-200">
           <li v-for="{ label, to } in NAV_ITEMS" :key="label">
-            <NuxtLink class="text-2xl font-medium text-neutral-300 transition-colors duration-150 ease-in hover:text-neutral-100" :to="to">
+            <NuxtLink
+              class="text-2xl font-medium text-neutral-300 transition-colors duration-150 ease-in hover:text-neutral-100"
+              exact-active-class="text-neutral-100"
+              :to="to"
+            >
               {{ label }}
             </NuxtLink>
           </li>
@@ -48,7 +52,11 @@ const isOpen = ref(false);
     <nav class="max-w-3xl flex-1 hidden md:block">
       <ul class="flex items-center justify-end gap-x-4 lg:gap-x-8">
         <li v-for="{ label, to } in NAV_ITEMS" :key="label">
-          <NuxtLink class="rounded-lg py-2 px-3 font-medium transition-colors duration-100 ease-in text-neutral-300 hover:bg-neutral-800 hover:text-neutral-100" :to="to">
+          <NuxtLink
+            class="rounded-lg py-2 px-3 font-medium transition-colors duration-100 ease-in text-neutral-400 hover:bg-neutral-800 hover:text-neutral-100"
+            exact-active-class="bg-neutral-800 !text-neutral-100"
+            :to="to"
+          >
             {{ label }}
           </NuxtLink>
         </li>
