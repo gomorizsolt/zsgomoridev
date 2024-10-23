@@ -3,6 +3,7 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@nuxtjs/tailwindcss",
     "@nuxt/image",
+    "@nuxt/fonts",
   ],
 
   devtools: {
