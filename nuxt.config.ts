@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
     "shadcn-nuxt",
     "radix-vue/nuxt",
+    "@nuxt/content",
   ],
 
   devtools: {
