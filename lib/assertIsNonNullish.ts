@@ -1,7 +1,0 @@
-function assertIsNonNullish<T>(value: T): asserts value is NonNullable<T> {
-  if (value === undefined || value === null) {
-    throw new Error("value is nullish");
-  }
-}
-
-export default assertIsNonNullish;

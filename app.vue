@@ -1,0 +1,22 @@
+<script setup lang="ts">
+useSeoMeta({
+  title: "Zsolt Gomori",
+  description: "Experienced Vue.js/Nuxt.js web developer with a passion for creating dynamic, high-performance websites, fueled by a love for sports.",
+});
+</script>
+
+<template>
+  <Body class="bg-neutral-900">
+    <UITooltipProvider :delay-duration="400">
+      <div class="flex min-h-screen flex-col">
+        <Header />
+
+        <main class="mx-auto flex w-full max-w-3xl flex-1 flex-col px-6 py-14 md:px-0">
+          <NuxtPage />
+        </main>
+
+        <Footer />
+      </div>
+    </UITooltipProvider>
+  </Body>
+</template>
