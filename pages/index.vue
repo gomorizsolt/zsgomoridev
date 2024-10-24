@@ -19,11 +19,11 @@ useHead({
     </p>
 
     <NuxtLink to="/about">
-      <Button>
+      <UIButton>
         About Me
 
         <span class="i-heroicons-arrow-right-solid" />
-      </Button>
+      </UIButton>
     </NuxtLink>
   </div>
 </template>

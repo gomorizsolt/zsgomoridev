@@ -33,4 +33,8 @@ export default defineNuxtConfig({
   image: {
     dir: "assets/images",
   },
+
+  shadcn: {
+    prefix: "UI",
+  },
 });
