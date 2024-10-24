@@ -10,5 +10,9 @@
     "cssVariables": false,
     "prefix": ""
   },
-  "framework": "nuxt"
+  "framework": "nuxt",
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/utils"
+  }
 }
