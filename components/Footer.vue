@@ -1,5 +1,5 @@
 <template>
-  <footer class="flex justify-center items-center gap-x-6 py-6">
+  <footer class="flex items-center gap-x-6 py-6 pl-8">
     <NuxtLink
       aria-label="GitHub"
       target="_blank"
