@@ -32,6 +32,7 @@
     "@egoist/tailwindcss-icons": "^1.8.1",
     "@iconify-json/fa6-brands": "^1.2.1",
     "@iconify-json/heroicons": "^1.2.1",
+    "@tailwindcss/typography": "^0.5.15",
     "husky": "^9.1.6",
     "typescript": "^5.6.3"
   }
