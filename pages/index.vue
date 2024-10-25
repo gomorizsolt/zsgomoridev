@@ -10,11 +10,11 @@ useHead({
       Hi, I'm
     </h2>
 
-    <h1 class="text-4xl underline underline-offset-[6px] decoration-blue-300 text-neutral-200 font-extrabold text-center mb-4 md:text-7xl md:underline-offset-[10px]">
+    <h1 class="text-4xl underline underline-offset-[6px] decoration-blue-300 text-neutral-200 font-extrabold text-center mb-6 md:text-7xl md:underline-offset-[10px]">
       ZSOLT GOMORI
     </h1>
 
-    <p class="text-neutral-300 mb-6">
+    <p class="text-neutral-300 mb-4">
       Experienced Vue.js/Nuxt.js web developer with a passion for creating dynamic, high-performance websites, fueled by a love for sports.
     </p>
 
