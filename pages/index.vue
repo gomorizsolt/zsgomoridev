@@ -5,7 +5,7 @@ useHead({
 </script>
 
 <template>
-  <div class="text-center">
+  <Container class="text-center">
     <h2 class="text-3xl font-semibold md:text-5xl mb-2 text-neutral-300">
       Hi, I'm
     </h2>
@@ -25,5 +25,5 @@ useHead({
         <span class="i-heroicons-arrow-right-solid" />
       </UIButton>
     </NuxtLink>
-  </div>
+  </Container>
 </template>
