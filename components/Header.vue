@@ -49,7 +49,7 @@ const toggleMenu = () => {
         format="webp"
         loading="lazy"
         alt="Picture of me while hiking"
-        class="h-10 w-10 rounded-full border-2 border-solid border-neutral-100 md:h-12 md:w-12"
+        class="size-10 rounded-full border-2 border-solid border-neutral-100 md:size-12"
         placeholder
       />
     </NuxtLink>
