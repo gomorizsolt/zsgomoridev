@@ -30,7 +30,7 @@ const LINKS = [
           target="_blank"
           class="text-neutral-300 transition-colors duration-150 hover:text-neutral-100"
         >
-          <span aria-hidden :class="[icon, 'h-5 w-5 md:h-6 md:w-6']" />
+          <span aria-hidden :class="[icon, 'size-5 md:size-6']" />
         </NuxtLink>
       </UITooltipTrigger>
 
