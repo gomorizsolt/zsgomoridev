@@ -4,6 +4,6 @@ My personal website.
 
 ## Stack
 
-- Next.js
+- Nuxt
 - TypeScript
 - Tailwind CSS
