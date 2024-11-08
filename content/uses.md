@@ -1,7 +1,9 @@
 ---
-title: 'Uses'
+title: Uses
 ---
 
-::Container
+::container
 # Uses
+
+This paragraph has been added from Nuxt Studio.
 ::
