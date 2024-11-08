@@ -23,7 +23,7 @@ Super adjustable regular office chair with great back support.
 
 ### Samsung CJ89 43" Ultra-Wide Monitor
 
-Before switching to this beast, I used to have a dual-monitor setup. It features a **curved** design with **32:10** aspect ratio, **3840 x 1200** resolution and **120 Hz** refresh rate. It's also equipped with several ports, including two USB Type-C, which enable the super convenient single cable setups.
+It features a **curved** design with **32:10** aspect ratio, **3840 x 1200** resolution and **120 Hz** refresh rate. It's also equipped with several ports, including two USB Type-C, which enable the super convenient single cable setups.
 
 ### Keychron K2 Keyboard
 
