@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "shadcn-nuxt",
     "radix-vue/nuxt",
     "@nuxt/content",
+    "@nuxthq/studio",
   ],
 
   devtools: {
