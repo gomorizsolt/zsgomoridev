@@ -24,6 +24,12 @@ export default defineNuxtConfig({
     },
   },
 
+  content: {
+    markdown: {
+      anchorLinks: false,
+    },
+  },
+
   compatibilityDate: "2024-04-03",
 
   eslint: {
