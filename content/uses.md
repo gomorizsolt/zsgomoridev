@@ -5,7 +5,7 @@ title: Uses
 ::container
 # Uses
 
-A list of essential tools powering my workdays. Inspired by \[Wes Bos' uses page]\(https\://wesbos.com/uses).
+A list of essential tools powering my workdays. Inspired by [Wes Bos' uses page](https://wesbos.com/uses).
 
 ## Workstation
 
