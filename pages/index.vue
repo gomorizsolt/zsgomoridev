@@ -15,7 +15,7 @@ useHead({
     </h1>
 
     <p class="text-neutral-300 mb-4">
-      Experienced Vue.js/Nuxt.js web developer with a passion for creating dynamic, high-performance websites, fueled by a love for sports.
+      Experienced web developer with a passion for creating dynamic, high-performance websites, fueled by a love for sports.
     </p>
 
     <NuxtLink to="/about">
