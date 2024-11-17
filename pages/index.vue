@@ -14,7 +14,7 @@ useHead({
       ZSOLT GOMORI
     </h1>
 
-    <p class="text-neutral-300 mb-4">
+    <p class="text-neutral-300 mb-4 max-w-xl w-full mx-auto">
       Experienced web developer with a passion for creating dynamic, high-performance websites, fueled by a love for sports.
     </p>
 
