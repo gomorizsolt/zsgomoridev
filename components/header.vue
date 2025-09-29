@@ -15,7 +15,7 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <header class="flex items-center justify-between p-8 text-sm">
+  <header class="flex justify-end p-8 text-sm md:justify-center">
     <button
       :class="['tham tham-e-spin tham-w-6 z-20 md:hidden', isOpen && 'tham-active']"
       aria-label="Toggle menu"
@@ -42,17 +42,6 @@ const toggleMenu = () => {
         </ul>
       </nav>
     </div>
-
-    <NuxtLink to="/">
-      <NuxtImg
-        src="/avatar.jpeg"
-        format="webp"
-        loading="lazy"
-        alt="Picture of me while hiking"
-        class="size-10 rounded-full border-2 border-solid border-neutral-100 md:size-12"
-        placeholder
-      />
-    </NuxtLink>
 
     <nav class="hidden md:block">
       <ul class="flex items-center justify-end gap-x-4 lg:gap-x-8">
